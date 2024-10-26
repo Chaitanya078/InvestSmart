@@ -1,0 +1,47 @@
+{% extends 'nav.html' %}
+{% block title %}
+    InvestSmart Login
+{% endblock title %}
+
+{% block form %}
+
+<h1 data-aos="fade-up">Login</h1>
+<div class="container" data-aos="fade-up">
+    <form action="/finauth/login/" method="post" class="form-container"> {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pass1">Password</label>
+            <input type="password" class="form-control" id="pass1" name="pass1" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-sm btn-block">Login</button>
+        <br>
+        <hr>
+        <p>Not a User? <a href="/finauth/signup/">Sign up</a></p>
+        <br>
+        <p>Forgot Password? <a href="/login">Click here to reset</a></p>
+        <br>
+
+    </form>
+</div>
+{% endblock form %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        'signup'
+    </h1>
+</body>
+</html>
